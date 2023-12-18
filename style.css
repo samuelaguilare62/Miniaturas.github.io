@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@500&family=Titillium+Web:wght@200&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000000;
+
+}
+
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  /* Ajusta según tus necesidades */
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu39pj5AqGY79fJrlIBD2-dmubotVD60OAaw&usqp=CAU');
+  /* Color de fondo del header */
+  color: white;
+  /* Color del texto */
+  background-size: cover;
+  animation: desplazamiento 30s linear infinite;
+  /* Ajusta la duración según tus preferencias */
+}
+
+
+#header span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+}
+
+#header p {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 15px;
+}
+
+.autor {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  overflow: hidden;
+  /* Oculta el contenido que se desborda */
+  white-space: nowrap;
+  /* Evita el salto de línea */
+  margin: 0;
+  /* Elimina los márgenes predeterminados del navegador */
+  border-right: 2px solid #333;
+  /* Simula el cursor de escritura */
+  animation: escribir 5s;
+  /* 2 segundos de duración, 40 pasos (caracteres) */
+}
+
+/* Definición de la animación */
+@keyframes escribir {
+  from {
+    width: 0;
+    /* Inicia y termina con ancho cero */
+  }
+
+  to {
+    width: 100%;
+    /* Termina con el ancho completo */
+  }
+}
+
+/* Define la animación */
+@keyframes desplazamiento {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
+}
+
+#carousel-container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+ h2 {
+  font-family: 'Titillium Web', sans-serif;
+  position: relative;
+  top: 20px;
+  color:white;
+  text-align: center;
+}
+
+#image-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 10px auto;
+  height: auto;
+  /* Ajusta según tus necesidades */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.image {
+  width: 100%;
+  /* O ajusta según tus necesidades */
+  border-radius: 20px;
+  margin-bottom: 30px;
+  /* O ajusta según tus necesidades */
+  transition: transform 0.3s ease;
+  /* Agrega una transición suave */
+  background-size: cover;
+  border: 3px solid white;
+}
+
+
+.image:hover {
+  transform: rotate(10deg);
+  /* Rota 45 grados al pasar el ratón sobre la imagen */
+}
+
+#my-carousel-container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#my-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.my-iframe-container {
+  box-sizing: border-box;
+  flex: 0 0 auto; /* Ajusta la flexibilidad de los elementos para que no cambien de tamaño */
+  width: 580px; /* Ancho del iframe más el margen derecho */
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.my-iframe-container iframe {
+  width: 560px; /* Ajusta el ancho del iframe según tu preferencia */
+  height: 315px; /* Ajusta la altura del iframe según tu preferencia */
+}
+
+.my-iframe-container:last-child {
+  margin-right: 0;
+}
+
+#scrollbar {
+  width: 100%;
+  height: 20px;
+}
+
+#thumb {
+  width: 100%;
+  height: 10%;
+  transition: width 0.5s ease-in-out;
+}
+
+#imageModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Asegura que el modal esté encima de todo */
+}
+
+#modalContent {
+  max-width: 80%;
+  max-height: 80%;
+  position: relative;
+}
+
+#modalContent img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  z-index: 1001;
+  /* Asegura que el botón de cierre esté encima de la imagen */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .image {
+    width: 48%;
+    /* Puedes ajustar el ancho de las imágenes */
+  }
+}
