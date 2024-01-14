@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Otros Diseños</title>
+  
+  <link rel="stylesheet" href="desing1.css">
+</head>
+<body>
+  
+  <a href="/indc2.html" class="OTDD">Atras</a>
+  
+  <section class="imagen-seccion">
+    <h2>Medida 3:4</h2>
+    <img src="https://i.ibb.co/0jJZzF2/Sin-t-tulo652112.jpg" class="image imagen-pequena" onclick="openModal(this.src)">
+    <img src="https://i.ibb.co/d5hXmMm/Sin-t-tulo73.jpg" class="image imagen-pequena" onclick="openModal(this.src)">
+    <img src="https://i.ibb.co/1mn1RRK/Picsart-24-01-13-12-35-05-706.jpg" class="image imagen-pequena" onclick="openModal(this.src)">
+  </section>
+  
+  <section class="imagen-seccion">
+    <!--<img src="imagen2.jpg" class="image imagen-mediana">-->
+  </section>
+  
+  <section class="imagen-seccion">
+    <!--<img src="imagen3.jpg" class="image imagen-grande">-->
+  </section>
+  
+  
+  <div id="imageModal">
+    <div id="modalContent">
+      <span id="closeModal" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Modal Image">
+    </div>
+  </div>
+  
+  <script>
+  
+  function openModal(src) {
+    const modalImage = document.getElementById('modalImage');
+
+    // Configurar la fuente de la imagen en el modal
+    modalImage.src = src;
+
+    // Mostrar el modal
+    document.getElementById('imageModal').style.display = 'flex';
+}
+
+
+function closeModal() {
+    // Limpiar la fuente de la imagen en el modal
+    document.getElementById('modalImage').src = '';
+
+    // Ocultar el modal
+    document.getElementById('imageModal').style.display = 'none';
+}
+
+  
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background: #000000;
+    color: white;
+}
+
+/* Estilos básicos para el botón OTDD */
+a.OTDD {
+  display: inline-block;
+  padding: 10px 10px;
+  text-decoration: none;
+  background-color: #19D7F3; /* Color de fondo del botón */
+  color: #ffffff; /* Color del texto del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease-in-out; /* Transición suave del color de fondo */
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* Cambiar el color de fondo cuando el mouse pasa sobre el botón */
+a.OTDD:hover {
+  background-color: #2980b9; /* Nuevo color de fondo al pasar el mouse */
+}
+
+
+.imagen-seccion {
+    text-align: center;
+    margin: 20px;
+    
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.imagen-seccion .image{
+  border: 3px solid white;
+}
+
+.imagen-grande,
+.imagen-mediana,
+.imagen-pequena{
+  margin-bottom: 10px;
+}
+
+.imagen-pequena {
+    width: 200px;
+    border: 2px solid #333;
+    display: inline-block;
+}
+
+.imagen-mediana {
+    width: 200px;
+    border: 2px solid #333;
+    display: inline-block;
+}
+
+.imagen-grande {
+    width: 200px;
+    border: 2px solid #333;
+    display: inline-block;
+}
+
+#imageModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Asegura que el modal esté encima de todo */
+}
+
+#modalContent {
+  max-width: 80%;
+  max-height: 80%;
+  position: relative;
+}
+
+#modalContent img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  z-index: 1001;
+  /* Asegura que el botón de cierre esté encima de la imagen */
+}
